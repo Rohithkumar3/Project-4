@@ -1,0 +1,7 @@
+C:\simplilearn\Day-21\Project4\Project4\bin\Debug\Project4.exe.config
+C:\simplilearn\Day-21\Project4\Project4\bin\Debug\Project4.exe
+C:\simplilearn\Day-21\Project4\Project4\bin\Debug\Project4.pdb
+C:\simplilearn\Day-21\Project4\Project4\obj\Debug\Project4.csproj.AssemblyReference.cache
+C:\simplilearn\Day-21\Project4\Project4\obj\Debug\Project4.csproj.CoreCompileInputs.cache
+C:\simplilearn\Day-21\Project4\Project4\obj\Debug\Project4.exe
+C:\simplilearn\Day-21\Project4\Project4\obj\Debug\Project4.pdb
