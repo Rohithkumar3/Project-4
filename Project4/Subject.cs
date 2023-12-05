@@ -10,11 +10,13 @@ namespace Project4
     {
         public string Name { get; set; }
         public string SubCode { get; set; }
+        public Teacher AssignedTeacher { get; set; }
 
-        public Subject(string name, string subCode)
+        public Subject(string name, string subCode, Teacher assignedTeacher)
         {
             Name = name;
             SubCode = subCode;
+            AssignedTeacher = assignedTeacher;
         }
     }
 

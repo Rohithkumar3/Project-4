@@ -1,10 +1,5 @@
 ﻿using Project4;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Project4
 {
     internal class Program
@@ -36,7 +31,7 @@ namespace Project4
                 Console.WriteLine("Enter the number of teachers:");
                 int n1 = int.Parse(Console.ReadLine());
 
-                Teacher[] teach = new Teacher[n1];
+                Teacher[] teacher = new Teacher[n1];
 
                 for (int i = 0; i < n1; i++)
                 {
@@ -49,7 +44,7 @@ namespace Project4
                     Console.WriteLine("Enter section:");
                     char section = char.Parse(Console.ReadLine());
 
-                    teach[i] = new Teacher(name, class1, section);
+                    teacher[i] = new Teacher(name, class1, section);
                     Console.WriteLine();
                 }
 
@@ -68,7 +63,13 @@ namespace Project4
                     Console.WriteLine("Enter subject code:");
                     string code = Console.ReadLine();
 
-                    sub[i] = new Subject(name, code);
+                    Console.WriteLine($"Enter assigned teacher name for {name}:");
+                    string teacherName = Console.ReadLine();
+
+                    // Find the teacher from the array
+                    Teacher assignedTeacher = Array.Find(teacher, t => t.Name == teacherName);
+
+                    sub[i] = new Subject(name, code, assignedTeacher);
                     Console.WriteLine();
                 }
 
@@ -82,7 +83,7 @@ namespace Project4
                 }
 
                 Console.WriteLine("----------PRINTING DETAILS OF TEACHERS------------------------");
-                foreach (var item in teach)
+                foreach (var item in teacher)
                 {
                     Console.WriteLine($"Name       : {item.Name}");
                     Console.WriteLine($"Subject    : {item.Class}");
@@ -95,6 +96,8 @@ namespace Project4
                 {
                     Console.WriteLine($"Name           : {item.Name}");
                     Console.WriteLine($"Subject Code   : {item.SubCode}");
+                    Console.WriteLine($"Assigned Teacher: {item.AssignedTeacher?.Name ?? "Not Assigned"}");
+               
                     Console.WriteLine();
                 }
               Console.ReadKey();
